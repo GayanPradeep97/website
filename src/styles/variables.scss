@@ -58,7 +58,7 @@ $boxshadow:0 1px 1px rgba(0,0,0,0.25),0 2px 2px rgba(0,0,0,0.2),
         }
     }@else if $point == sm{
         //600px
-        @media (min-width:37.em){
+        @media (min-width:37em){
             @content;
         }
     }
