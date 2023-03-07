@@ -1,39 +1,34 @@
-import React, {setState} from 'react';
+import React, { useState } from 'react';
 import Logo from '../../UI/Logo/Logo';
 import classes from './Header.module.scss';
 import Nav from './Nav/Nav';
-import {CgMenuRight, CgClose} from 'react-icons/cg';
+import { CgMenuRight, CgClose } from 'react-icons/cg';
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
 
-    const [menuOpen, setMenuOpen] = setState(false);
+  const handleMenuToggle = () => {
+    setMenuOpen((prevState) => !prevState);
+  };
 
-    const handleMenuToggle = () => {
-        setMenuOpen((p) => !p);
-    }
+  const menuToggle = !menuOpen ? (
+    <CgMenuRight onClick={handleMenuToggle} />
+  ) : (
+    <CgClose onClick={handleMenuToggle} />
+  );
 
-    const menuToggle = !menuOpen ? (
-        <CgMenuRight onclick={handleMenuToggle}/>
-    ): (
-        <CgClose onclick={handleMenuToggle}/>
-    );
-    
-
-
-    return (
-        <Header classname={classes.header}>
-            <Logo/>
-            <Nav/>
-            <div className={classes.header_menu}>
-                <div className={classes.header_menu_toggle}>
-                    {menuToggle}
-                </div>
-                <aside className={`${classes.menu} ${classes.open && classes.show}`}>
-                    <Nav isMenu menuToggle={handleMenuToggle} />
-                    </aside>
-            </div>
-        </Header>
-    );
-}
+  return (
+    <header className={classes.header}>
+      <Logo />
+      <Nav />
+      <div className={classes.header_menu}>
+        <div className={classes.header_menu_toggle}>{menuToggle}</div>
+        <aside className={`${classes.menu} ${menuOpen && classes.show}`}>
+          <Nav isMenu menuToggle={handleMenuToggle} />
+        </aside>
+      </div>
+    </header>
+  );
+};
 
 export default Header;

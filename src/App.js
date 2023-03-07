@@ -3,9 +3,14 @@ import Header from "./components/Header/Header";
 
 function App() {
   return (
-    <Fragment>
-      <Header/>
-    </Fragment>
+    <div>
+      <Fragment>
+        <Header/>
+      </Fragment>
+     
+    </div>
+      
+   
   );
 }
 
