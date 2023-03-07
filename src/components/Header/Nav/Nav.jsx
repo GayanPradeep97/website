@@ -23,6 +23,7 @@ const Nav = () => {
                 <a href='/'>Learn More </a>
             </li>
         </ul>
+        <button className={classes.bookNow} onClick={menuToggle}>Book Now</button>
     </nav>
   )
 }
