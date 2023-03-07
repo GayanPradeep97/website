@@ -1,5 +1,6 @@
 import React from 'react'
 import classes from './Nav.module.scss'
+import {isMenu, menuToggle,} from '../Header';
 
 const Nav = () => {
   return (
