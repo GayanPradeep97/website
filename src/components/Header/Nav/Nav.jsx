@@ -1,8 +1,15 @@
-import React from 'react'
+import React, {useState} from 'react'
 import classes from './Nav.module.scss'
-import {isMenu, menuToggle,} from '../Header';
+
 
 const Nav = () => {
+
+    const [isMenu, setIsMenu] = useState(false);
+
+    const menuToggle = () => {
+      setIsMenu(!isMenu);
+    };
+
   return (
     <nav className={isMenu ? classes.menu_nav : classes.nav}>
         <ul>

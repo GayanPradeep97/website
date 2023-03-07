@@ -12,7 +12,7 @@
 
         li{
             height: 100%;
-            &:nth-child(:last-child){
+            &:last-child{
                 margin-right: $spacing-md;
             }
             a{
@@ -20,7 +20,7 @@
                 align-items: center;
                 height: 100%;
                 font-size: 1.1rem;
-                letter-spacing: $letterspacing;
+                letter-spacing: $letterSpacing;
                 text-decoration: none;
                 color: $white;
                 position: relative;
@@ -65,7 +65,7 @@
         margin-bottom: $spacing-lg;
 
         li{
-            &:nth-child(:last-child){
+            &:last-child{
                 margin-bottom: $spacing-md;
             }
             a{
