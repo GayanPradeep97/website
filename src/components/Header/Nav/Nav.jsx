@@ -12,7 +12,7 @@ const Nav = () => {
 
   return (
     <nav className={isMenu ? classes.menu_nav : classes.nav}>
-        <ul>
+        <ul >
             <li onClick={menuToggle}> 
                 <a href='/'>Location </a>
             </li>
